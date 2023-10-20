@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using Diary;
+
 namespace GUI_WPF
 {
     /// <summary>
@@ -20,9 +22,12 @@ namespace GUI_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        DiaryContext db = new DiaryContext();
+
         public MainWindow()
         {
             InitializeComponent();
+            db.Database.EnsureCreated();
         }
     }
 }
