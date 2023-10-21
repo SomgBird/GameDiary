@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Diary.Models
 {
-    public class Tag
+    public class Category
     {
         public int Id { get; set; }
-        public required string TagName { get; set; }
+        public required string Name { get; set; }
+        public string? Description { get; set; }
 
-        public virtual List<Game>? Games { get; set; }
+        public virtual List<Game> Games { get; set; }
     }
 }
